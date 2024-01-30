@@ -5,15 +5,15 @@ import os
 from pydub import AudioSegment
 from pydub.utils import make_chunks, mediainfo
 import math
-from dotenv import load_dotenv, find_dotenv
-_ = load_dotenv(find_dotenv()) # read local .env file 
+#from dotenv import load_dotenv, find_dotenv
+#_ = load_dotenv(find_dotenv()) # read local .env file 
 
 temp_dir = tempfile.TemporaryDirectory()
 
 #OPENAI Key and Org
 # openai.api_key = os.environ['OPENAI_API_KEY'] #OpenAI API key.
-openai.api_key = st
-openai.organization = st.secrets['OPENAI_ORGANIZATION']
+openai.api_key = st.secrets['OPENAI_API_KEY']
+#openai.organization = st.secrets['OPENAI_ORGANIZATION']
 
 #Extract openai Model list 
 #print(openai.Model.list())
