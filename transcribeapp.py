@@ -51,10 +51,14 @@ if uploaded_file is not None:
 #Function for splitting uploaded file into chunks (based on file size), and saving to chunk-folder.
 def video_chunkifyer_25(original_path):
     #If for å sjekke om det er mp4 eller wav
-    if(((original_path.name).split('.')[-1].lower()) != 'wav'):
-        myaudio = AudioSegment.from_file(original_path, "mp4")
+    file_ext = (original_path.name).split('.')[-1].lower()w
+    if file_ext== 'wav'):
+        myaudio = AudioSegment.from_file(original_path, "wav")
+    elif file_ext == 'mp4':
+        myaudio = AudioSegment.from_file(original_path , "mp4")
     else:
-        myaudio = AudioSegment.from_file(original_path , "wav")
+        myaudio = AudioSegment.from_file(original_path , "mp3")
+      
     #channel_count = myaudio.channels    #Get channels
     #sample_width = myaudio.sample_width #Get sample width
     #duration_in_sec = len(myaudio) / 1000#Length of audio in sec
