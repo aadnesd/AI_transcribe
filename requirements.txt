@@ -1,2 +1,2 @@
-openai
-pydub
+openai ==0.27.8
+pydub==
