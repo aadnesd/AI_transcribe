@@ -21,7 +21,7 @@ openai.api_key = st.secrets['OPENAI_API_KEY']
 #Setup streamlit page configurations, and file uploader for chosen file formats
 st.set_page_config(page_title="Create video documentation!", page_icon=":robot:")
 st.title("Video-transcription documenter")
-uploaded_file = st.file_uploader("Upload a .wav or .mp4 file to transcribe and document:", type=[".wav", ".mp4"])
+uploaded_file = st.file_uploader("Upload a .wav or .mp4 file to transcribe and document:", type=[".wav", ".mp4",".mp3"])
 st.info(
                 f"""
                         👆 Upload a .wav or .mp4 file. Or try a sample: [WAV sample](https://github.com/CharlyWargnier/CSVHub/blob/main/Wave_files_demos/Welcome.wav?raw=true) | [MP4 Sample](https://vimeo.com/665800536)
